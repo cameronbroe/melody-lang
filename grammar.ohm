@@ -3,16 +3,15 @@ MelodyDocument {
 	Block = MelodyBlock | CompositionBlock
 	MelodyBlock = "melody " ident "{" Statement* "}"
   CompositionBlock = "composition" "{" Statement* "}"
-  
+    
   ident = (alnum | "_")*
 
 	Statement = (Note | melodyReference) ";"
     
   melodyReference = "$"ident
 
-	Note = "!{" noteName noteAccidental noteOctave intervalType interval "}"
+	Note = "!{" noteName noteAccidental noteOctave ("*" interval)? "}"
   interval (a valid beat division) = digit+
-  intervalType (a valid division type) = "/" | "*"
   
   noteName (a valid note name) = "A".."G"
   noteAccidental (a valid accidental [-, #, b]) = "-" | "#" | "b"
