@@ -1,0 +1,20 @@
+MelodyDocument {
+	Document = Block+
+	Block = MelodyBlock | CompositionBlock
+	MelodyBlock = "melody " ident "{" Statement* "}"
+  CompositionBlock = "composition" "{" Statement* "}"
+  
+  ident = (alnum | "_")*
+
+	Statement = (Note | melodyReference) ";"
+    
+  melodyReference = "$"ident
+
+	Note = "!{" noteName noteAccidental noteOctave "}" IntervalType interval
+  interval (a valid beat division) = digit+
+  IntervalType (a valid division type) = "/" | "*"
+  
+  noteName (a valid note name) = "A".."G"
+  noteAccidental (a valid accidental [-, #, b]) = "-" | "#" | "b"
+  noteOctave (an octave number) = digit
+}
