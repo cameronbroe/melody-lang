@@ -10,11 +10,11 @@ MelodyDocument {
     
   melodyReference = "$"ident
 
-	Note = "!{" noteName noteAccidental noteOctave "}" IntervalType interval
+	Note = "!{" noteName noteAccidental noteOctave intervalType interval "}"
   interval (a valid beat division) = digit+
-  IntervalType (a valid division type) = "/" | "*"
+  intervalType (a valid division type) = "/" | "*"
   
   noteName (a valid note name) = "A".."G"
   noteAccidental (a valid accidental [-, #, b]) = "-" | "#" | "b"
-  noteOctave (an octave number) = digit
+  noteOctave (an octave number) = digit+
 }

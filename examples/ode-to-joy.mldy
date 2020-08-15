@@ -1,74 +1,69 @@
-metadata = {
-  bpm 120
+melody startPhrase {
+  !{E-4 / 4};
+  !{E-4 / 4};
+  !{F-4 / 4};
+  !{G-4 / 4};
+
+  !{G-4 / 4};
+  !{F-4 / 4};
+  !{E-4 / 4};
+  !{D-4 / 4};
+
+  !{C-4 / 4};
+  !{C-4 / 4};
+  !{D-4 / 4};
+  !{E-4 / 4};
+
+  !{E-4 / 4};
+  !{D-4 / 4};
+  !{D-4 / 2};
 }
 
-melody startPhrase = {
-  !E4/4
-  !E4/4
-  !F4/4
-  !G4/4
+melody responsePhrase {
+  !{E-4 / 4};
+  !{E-4 / 4};
+  !{F-4 / 4};
+  !{G-4 / 4};
 
+  !{G-4 / 4};
+  !{F-4 / 4};
+  !{E-4 / 4};
+  !{D-4 / 4};
 
-  !G4/4
-  !F4/4
-  !E4/4
-  !D4/4
+  !{C-4 / 4};
+  !{C-4 / 4};
+  !{D-4 / 4};
+  !{E-4 / 4};
 
-  !C4/4
-  !C4/4
-  !D4/4
-  !E4/4
-
-  !E4/4
-  !D4/4
-  !D4/2
+  !{D-4 / 4};
+  !{C-4 / 4};
+  !{C-4 / 2};
 }
 
-melody responsePhrase = {
-  !E4/4
-  !E4/4
-  !F4/4
-  !G4/4
-
-  !G4/4
-  !F4/4
-  !E4/4
-  !D4/4
-
-  !C4/4
-  !C4/4
-  !D4/4
-  !E4/4
-
-  !D4/4
-  !C4/4
-  !C4/2
-}
-
-melody decoration = {
-  !D4/4
-  !D4/4
-  !E4/4
-  !C4/4
+melody decoration {
+  !{D-4 / 4};
+  !{D-4 / 4};
+  !{E-4 / 4};
+  !{C-4 / 4};
   
-  !D4/4
-  !F4/4
-  !E4/4
-  !C4/4
+  !{D-4 / 4};
+  !{F-4 / 4};
+  !{E-4 / 4};
+  !{C-4 / 4};
 
-  !D4/4
-  !F4/4
-  !E4/4
-  !D4/4
+  !{D-4 / 4};
+  !{F-4 / 4};
+  !{E-4 / 4};
+  !{D-4 / 4};
   
-  !C4/4
-  !D4/4
-  !G4/2
+  !{C-4 / 4};
+  !{D-4 / 4};
+  !{G-4 / 2};
 }
 
-composition = {
-  $startPhrase
-  $responsePhrase
-  $decoration
-  $responsePhrase
+composition {
+  $startPhrase;
+  $responsePhrase;
+  $decoration;
+  $responsePhrase;
 }
