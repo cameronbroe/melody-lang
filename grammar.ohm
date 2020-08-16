@@ -1,16 +1,16 @@
 MelodyDocument {
-	Document = Block+
-	Block = MelodyBlock | CompositionBlock
-	MelodyBlock = "melody " ident "{" Statement* "}"
+  Document = Block+
+  Block = MelodyBlock | CompositionBlock
+  MelodyBlock = "melody " ident "{" Statement* "}"
   CompositionBlock = "composition" "{" Statement* "}"
     
   ident = (alnum | "_")*
 
-	Statement = (Note | melodyReference) ";"
+  Statement = (Note | melodyReference) ";"
     
   melodyReference = "$"ident
 
-	Note = "!{" (restNote | nonRestNote) IntervalPair? "}"
+  Note = "!{" (restNote | nonRestNote) IntervalPair? "}"
 
   restNote = "REST"
   nonRestNote = noteName noteAccidental noteOctave

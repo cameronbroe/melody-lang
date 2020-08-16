@@ -4,7 +4,7 @@ const util = require('util');
 const lodash = require('lodash');
 const net = require('net');
 
-const bpm = 120;
+const bpm = 108;
 
 const node_to_source = node => {
     if (node.ctorName == "_terminal") {
@@ -62,7 +62,7 @@ const grammar = ohm.grammar(grammarData);
 
 let melodies = {};
 
-const melodyData = fs.readFileSync('examples/single-note.mldy');
+const melodyData = fs.readFileSync('examples/zeldas-lullaby.mldy');
 const result = grammar.match(melodyData);
 
 const playMessage = (msg) => {
@@ -140,7 +140,7 @@ if(result.succeeded()) {
         "Args": {
           "Pitch": note_to_freq(note.note),
           "Seconds": interval_to_seconds(note.interval),
-          "Type": 2,
+          "Type": 0,
           "Path": ""
         }
       }

@@ -10,6 +10,9 @@ melody note {
   !{C-5 / 2};
 }
 
+// This comment should
+// just be completely ignored by the parser
+
 composition {
   $note;
 }
