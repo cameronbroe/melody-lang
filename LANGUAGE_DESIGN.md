@@ -8,9 +8,15 @@ A Melody file is called a _document_. Inside of a _document_, there are differen
 
 ## Notes
 
-A _note_ has syntax like this: `{ $noteName $noteAccidental $noteOctave -> $noteLength }`
+A _note_ has syntax like this: `{ $noteName $noteAccidental $noteOctave $noteInterval? }`
 
 * `$noteName` is the name of the musical note to play
 * `$noteAccidental` is the accidental type of the note. `-` for natural, `#` for sharp, and `b` for flat
 * `$noteOctave` is what octave number to play
-* `$noteLength` is the number of beats the note should be on. This is in relation to the `#bpm` parameter of the current scope. It can be omitted for a default value of 1.
+
+* `$noteInterval` is a pair of values to help calculate the length the note should play. It can be omitted with a default pair of `* 1`, which is 1 beat.
+  * `$divisionType` is how the length is calculated. `*` is multiplicative and will cause the note to play for `$noteLength` beats. `/` is division.
+    * `* 1` means one beat.
+    * `* 4` means 4 beats.
+    * `/ 2` means half of a beat.
+  * `$noteLength` is the operand for the `$divisionType` operation. This is in relation to the `#bpm` parameter of the current scope. It can be omitted for a default value of 1.
